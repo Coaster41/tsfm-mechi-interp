@@ -341,8 +341,8 @@ class CachedTSMixupDataset(Dataset):
         assert len(future_values) == self.prediction_length, f"Future values length: {len(future_values)}"
         
         return {
-            'past_values': torch.tensor(past_values, dtype=torch.float32).unsqueeze(-1),
-            'future_values': torch.tensor(future_values, dtype=torch.float32).unsqueeze(-1),
+            'past_values': torch.tensor(past_values, dtype=torch.float32),
+            'future_values': torch.tensor(future_values, dtype=torch.float32),
         }
 
     @classmethod
